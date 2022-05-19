@@ -1,11 +1,11 @@
 import "./styles.css";
-import Mobile from "./components/Mobile";
-import Navbar from "./components/Navbar";
+import React from "react";
+import Counter from "./components/Counter";
 function App() {
+  const [count, setCount] = React.useState(100);
   return (
     <div className="App">
-      <Mobile />
-      <Navbar />
+      <Counter value={count} setCount={setCount} />
     </div>
   );
 }
